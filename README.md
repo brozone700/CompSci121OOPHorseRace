@@ -3,23 +3,22 @@
 ```mermaid
 classDiagram
   class Horse {
-    -int id_
-    -int trackLength_
-    -int position_
-    +Horse(id, trackLength)
+    -int position
+    -int name
+    -const static int TrackLength
+    +Horse()
+    +setName(n)
     +advance()
-    +hasFinished() bool
+    +finished() bool
     +print()
   }
   class Race {
-    +TrackLength : int
-    +NumHorses : int
-    -vector~Horse~ horses_
+    -const static int NUM_HORSES
+    -Horse horse[NUM_HORSES]
+    -int KeepGoingRace
     +Race()
     +run()
-    -advanceHorses()
     -printTrack()
-    -isOver() bool
   }
   Race "1" *-- "5" Horse : contains
 ```
