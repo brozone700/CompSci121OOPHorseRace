@@ -20,5 +20,4 @@ classDiagram
     +run()
     -printTrack()
   }
-  Race "1" *-- "5" Horse : contains
 ```
